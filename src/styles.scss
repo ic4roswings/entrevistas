@@ -1,0 +1,6 @@
+$theme-colors: ( "primary": #D7282F, "secondary":#41555F, "tertiary": #0095A9, "success": #007119, "warning": #ffc409, "danger": #CF0A2C, "dark": #222428, "medium": #41555F, "light": #E6E6E6, );
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
