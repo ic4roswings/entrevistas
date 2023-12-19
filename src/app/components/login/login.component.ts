@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +13,11 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      usernumber: ['', [Validators.pattern('^[0-9]{5,}$'), Validators.required]],
+      usernumber: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -24,8 +26,13 @@ export class LoginComponent implements OnInit {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
     } else {
-      // TODO: Auth Logic
-      this.router.navigateByUrl('/home');
+      this.authService.login(this.form.value['usernumber'],this.form.value['password']).subscribe(data => {
+        if (data) {
+          this.router.navigateByUrl('/home');
+        } else {
+          Swal.fire('Contraseña incorrecta', 'Intente de nuevo', 'error');
+        }
+      });
     }
     return;
   }
