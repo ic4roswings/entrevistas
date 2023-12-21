@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "1ef0ec71-734c-44b2-b5c8-e560ba425820",
+		"name": "Entrevista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23377893"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "getUsuarioAsotomayor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/usuarios/asotomayor.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"usuarios",
+								"asotomayor.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trenes",
+			"item": [
+				{
+					"name": "getTrenes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/trenes.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"trenes.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTren",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"destino\": \"Miami\",\r\n        \"llegada\": \"19/12/23\",\r\n        \"origen\": \"Bowden\",\r\n        \"salida\": \"18/12/23\",\r\n        \"trenId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/trenes.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"trenes.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTren",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/trenes/-Nm2OqjlkXkCAkHAtKXQ.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"trenes",
+								"-Nm2OqjlkXkCAkHAtKXQ.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifyTren",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"destino\": \"Ft. Pierce\",\r\n    \"llegada\": \"19/12/23\",\r\n    \"origen\": \"Bowden\",\r\n    \"salida\": \"18/12/23\",\r\n    \"trenId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/trenes/-Nm2OqjlkXkCAkHAtKXQ.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"trenes",
+								"-Nm2OqjlkXkCAkHAtKXQ.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTrain",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://prueba-56c0e-default-rtdb.firebaseio.com/trenes/-Nm2OqjlkXkCAkHAtKXQ.json",
+							"protocol": "https",
+							"host": [
+								"prueba-56c0e-default-rtdb",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"trenes",
+								"-Nm2OqjlkXkCAkHAtKXQ.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
